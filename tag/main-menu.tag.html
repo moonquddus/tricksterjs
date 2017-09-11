@@ -1,0 +1,24 @@
+<main-menu>
+	<div class="container">
+		<h3>{ opts.title }</h3>
+		<ul>
+			<li><a onclick={ startNewGame }>{ opts.newgame }</a></li>
+			<li><label for="loadGameInput" id="load-game-input-container"><input type="file" name="loadGameInput" id="load-game-input" onchange={ loadSavedGame } />{ opts.loadgame }</label></li>
+		</ul>
+	</div>
+	
+	<script>
+		opts.title = "Welcome to my game";
+		opts.newgame = "Start New Game";
+		opts.loadgame = "Load Game"
+
+		startNewGame (e) {
+			route("new-game");
+		}
+
+		loadSavedGame (e) {
+			var file = e.target.files[0];
+			saveService.loadGame(file);
+		}
+	</script>
+</main-menu>

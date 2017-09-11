@@ -1,0 +1,31 @@
+#load-game-input-container {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+#load-game-input {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
+/* Example stylistic flourishes */
+
+#load-game-input-container {
+
+}
+
+#load-game-input {
+    cursor: pointer;
+}

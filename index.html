@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<link   href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link   href="assets/css/style.css" rel="stylesheet">
+		<script src="lib/riot/riot+compiler.min.js"></script>
+		<script src="lib/riot/route+tag.min.js"></script>
+		<script src="listener/save-listener.js"></script>
+		<script src="model/save-model.js"></script>
+		<script src="service/file-service.js"></script>
+		<script src="service/save-service.js"></script>
+		<script src="service/util.js"></script>
+		<script src="service/router.js"></script>
+		<script src="tag/main-menu.tag.html" type="riot/tag"></script>
+		<script src="tag/new-game.tag.html" type="riot/tag"></script>
+		<script src="tag/overview.tag.html" type="riot/tag"></script>
+	</head>
+	<body>
+		<main></main>
+		<script>
+			riot.compile(function() {
+			  riot.mount('main', 'main-menu', {});
+			});
+		</script>
+	</body>
+</html>

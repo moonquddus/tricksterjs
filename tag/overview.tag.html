@@ -1,0 +1,25 @@
+<overview>
+	<h3>Overview</h3>
+	<ul>
+		<li>Level: { saveService.saveObj.level }</li>
+		<li>Money: { saveService.saveObj.translatedMoney }</li>
+	</ul>
+
+	<h3>Actions</h3>
+	<ul>
+		<li><a onclick={ addMoney } amount="1" >Add 1 Piece</a></li>
+		<li><a onclick={ addMoney } amount="10">Add 10 Pieces</a></li>
+		<li><a onclick={ saveGame } >Save Game</a></li>
+	</ul>
+
+	<script>
+		addMoney (e) {
+			var amount = parseInt(e.target.attributes.amount.value);
+			saveService.saveObj.money += amount;
+		}
+
+		saveGame (e) {
+			saveService.saveGame();
+		}
+	</script>
+</overview>
