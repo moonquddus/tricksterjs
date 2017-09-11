@@ -8,3 +8,11 @@ String.prototype.hashCode = function() {
   }
   return hash;
 };
+
+var myUtils = {
+	getTimestamp: function(){
+		var currentDate = new Date();
+		var string = currentDate.getFullYear() + "-" + currentDate.getMonth() + "-" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds() + ":" + currentDate.getMilliseconds();
+		return string;
+	}
+};

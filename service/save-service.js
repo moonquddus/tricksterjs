@@ -14,7 +14,8 @@ var saveService = {
 		console.log("The Hash", this.saveObj.saveHash);
 
 		var saveData = new Blob([JSON.stringify(this.saveObj)], {type : 'application/json'});
-		fileService.download(window.URL.createObjectURL(saveData), "test.save");
+		var currentDate = new Date();
+		fileService.download(window.URL.createObjectURL(saveData), myUtils.getTimestamp() + ".save");
 	},
 
 	loadGame: function(file){
