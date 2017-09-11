@@ -6,12 +6,12 @@ I had no internet access, and I was bored
 
 ### What can it do?
 As of right now:
-> Start a new game
-> Save a game's data (JSON) to the user's storage
-> Ability to load that game data and come back where you left off
-> Show you an annoying error message
-> Record stats
-> Run on pretty much any toaster that has an updated browser
+- Start a new game
+- Save a game's data (JSON) to the user's storage
+- Ability to load that game data and come back where you left off
+- Show you an annoying error message
+- Record stats
+- Run on pretty much any toaster that has an updated browser
 
 ### Should I use this when making a browser game?
 I sincerely recommend you don't
@@ -26,5 +26,5 @@ Apache 2.0
 Okay... but I did put a lot of procrastination into this, so please leave some credit on my behalf - or even better, buy me a beer or something
 
 ### TODO
-> Document my code, because I'm a good boy
-> Finish the error pop-uppy thingy
+- Document my code, because I'm a good boy
+- Finish the error pop-uppy thingy
