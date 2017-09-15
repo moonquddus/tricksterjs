@@ -1,5 +1,5 @@
 # trickster.js
-A barebones browser-game framework that's 100% client-side - built on top of riot.js
+A barebones browser-game template that's 100% client-side - built on top of riot.js
 
 ### What on Earth possessed you to make this?
 A wonderful orgy of boredom, procrastination and a dodgy internet connection
