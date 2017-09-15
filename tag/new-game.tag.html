@@ -1,13 +1,21 @@
 <new-game>
 	<h3>New Game!</h3>
-	<p>A brand new game has been started. Let's go to the overview screen.</p>
-	<a onclick={ clickfunction }>OVERVIEW</a>
+	<p>Enter a name for your new guild:</p>
+	<p><input type="text" onkeyup={ setName } value={ opts.guildName } /><button onclick={ clickfunction }>Submit!</button></p>
 
 	<script>
 		saveService.newSave();
+		opts.guildName = "";
+
+		setName(e) {
+			opts.guildName = e.target.value;
+		}
 
 		clickfunction (e) {
-			route("/overview");
+			if (opts.guildName !== "" && myUtils.testSafeString(opts.guildName)){
+				saveService.saveObj.guildName = opts.guildName;
+				route("/overview");
+			}
 		}
 	</script>
 </new-game>
