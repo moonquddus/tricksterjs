@@ -4,9 +4,13 @@
  */
 class SaveModel {
 	constructor(money, level) {
-		this.money = 0;
-		this.level = 1;
 		this.saveHash = null;
+		this.level = 1;
+		this.money = 0;
+		this.mercenaries = {};
+		this.officers = {};
+		this.buildings = {};
+		this.quests = {};
 	}
 
 	get translatedMoney() {
