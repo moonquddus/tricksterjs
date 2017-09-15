@@ -22,6 +22,7 @@ I sincerely recommend you don't
 ### What external stuffs did you put in this project?
 - riot.js
 - Normalize.css (You can very easily take this out)
+- Google Web Fonts (Again, easy to take out)
 
 That's it
 
