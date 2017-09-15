@@ -16,4 +16,9 @@ class SaveModel {
 	levelUp() {
 		this.level = this.level + 1;
 	}
+
+	importSave(data){
+		this.money = parseInt(data.money);
+		this.level = parseInt(data.level);
+	}
 }
