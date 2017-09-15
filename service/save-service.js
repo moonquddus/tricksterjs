@@ -24,19 +24,30 @@ var saveService = {
 	processLoadedGame: function(fileContents){
 
 		if (fileContents && fileContents.target){
-			var saveData = fileContents.target.result;
+			var saveData = JSON.parse(fileContents.target.result);
+			var tempSave = JSON.parse(fileContents.target.result);
 		}
 		else{
-			errorService.throwError("Cannot load save file", "Save data not found");
+			errorService.throwError("Loading Game", "Save data not found");
 		}
 		// verify the game first
-		var saveObj = JSON.parse(saveData);
-		if (typeOf(saveObj) == "object"){
-			console.log("Save Data", saveObj);
-		}
-		else{
-			errorService.throwError("Cannot load save file", "Could not convert save data");
-		}
+ 		if (saveData.hasOwnProperty("saveHash") === true){
+ 			tempSave.saveHash = null;
+ 			var tempHash = JSON.stringify(tempSave).hashCode();
+ 
+ 			// console.log(saveData, tempHash);
+ 			if (saveData.saveHash === tempHash){
+ 				this.saveObj = new SaveModel();
+ 				this.saveObj.importSave(saveData);
+ 				route("/overview");
+ 			}
+ 			else{
+ 				errorService.throwError("Loading Game", "Cannot verify save data. Please try again.");
+ 			}
+ 		}
+ 		else{
+ 			errorService.throwError("Loading Game", "Could not convert save data");
+  		}
 	}
 
 };
