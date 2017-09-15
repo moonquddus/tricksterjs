@@ -1,7 +1,8 @@
 <html>
 	<head>
-		<link   href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link   href="assets/css/style.css" rel="stylesheet">
+		<title>My little riot.js Game</title>
+		<link href="https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+		<link   href="assets/css/core.css" rel="stylesheet">
 		<script src="lib/riot/riot+compiler.min.js"></script>
 		<script src="lib/riot/route+tag.min.js"></script>
 		<script src="listener/save-listener.js"></script>
@@ -15,9 +16,11 @@
 		<script src="tag/main-menu.tag.html" type="riot/tag"></script>
 		<script src="tag/new-game.tag.html" type="riot/tag"></script>
 		<script src="tag/overview.tag.html" type="riot/tag"></script>
-		<title>My little riot.js Game</title>
+		<script src="tag/nav-menu.tag.html" type="riot/tag"></script>
+		<style  type="riot"></style>
 	</head>
 	<body>
+		<nav></nav>
 		<main></main>
 		<script>
 			riot.compile(function() {

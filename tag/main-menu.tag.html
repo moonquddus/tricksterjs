@@ -1,15 +1,17 @@
 <main-menu>
-	<div class="">
-		<h3>{ opts.title }</h3>
-		<ul>
-			<li><a onclick={ startNewGame }>{ opts.newgame }</a></li>
-			<li><label for="loadGameInput" id="load-game-input-container"><input type="file" name="loadGameInput" id="load-game-input" onchange={ loadSavedGame } />{ opts.loadgame }</label></li>
-		</ul>
+	<div class="container">
+		<div class="hero">
+			<h1>{ opts.title }</h1>
+
+			<p class="menu-button-wrapper"><a onclick={ startNewGame }>{ opts.newgame }</a></p>
+			<p class="menu-button-wrapper"><label for="loadGameInput" id="load-game-input-container"><input type="file" name="loadGameInput" id="load-game-input" onchange={ loadSavedGame } />{ opts.loadgame }</label></p>
+
+		</div>
 	</div>
 	
 	<script>
-		opts.title = "Welcome to my game";
-		opts.newgame = "Start New Game";
+		opts.title = "Guild Manager";
+		opts.newgame = "New Game";
 		opts.loadgame = "Load Game"
 
 		startNewGame (e) {
@@ -21,4 +23,67 @@
 			saveService.loadGame(file);
 		}
 	</script>
+	<style>
+		:scope {
+			text-align: center;
+		}
+
+		h1 {
+			color: #fff;
+			text-shadow: 1px 1px 1px #000;
+			font-size: 5rem;
+		}
+
+		.hero {
+			display: inline-block;
+			margin: 0 auto;
+			margin-top: 5%;
+			width: 800px;
+			max-width: 90%;
+		}
+
+		.menu-button-wrapper {
+			display: inline-block;
+			width: 100%;
+			margin: 10px 0px;
+		}
+
+		.menu-button-wrapper > a, .menu-button-wrapper > label {
+			display: block;
+			width: 300px;
+			max-width: 90%;
+			margin: 0 auto;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-size: 2rem;
+			color: #fff;
+			background: rgba(0, 0, 0, 0.3);
+		}
+
+		.menu-button-wrapper > a:hover, .menu-button-wrapper > label:hover {
+			color: #ecef66;
+		}
+
+		#load-game-input-container {
+		    overflow: hidden;
+		    position: relative;
+		    display: inline-block;
+		    margin: 0;
+		    vertical-align: middle;
+		}
+
+		#load-game-input {
+		    cursor: inherit;
+		    display: block;
+		    font-size: 999px;
+		    filter: alpha(opacity=0);
+		    min-height: 100%;
+		    min-width: 100%;
+		    opacity: 0;
+		    position: absolute;
+		    right: 0;
+		    text-align: right;
+		    top: 0;
+		}
+	</style>
 </main-menu>

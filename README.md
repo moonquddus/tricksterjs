@@ -21,7 +21,7 @@ I sincerely recommend you don't
 
 ### What external stuffs did you put in this project?
 - riot.js
-- Bootstrap 4.0 (You can very easily take this out)
+- Normalize.css (You can very easily take this out)
 
 That's it
 
