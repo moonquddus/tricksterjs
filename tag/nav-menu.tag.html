@@ -1,10 +1,67 @@
 <nav-menu>
 	<ul>
-		<li><a>News</a></li>
-		<li><a>Your Guild</a></li>
-		<li><a>Active Quests</a></li>
-		<li><a>Job Market</a></li>
-		<li><a>Hiring Place</a></li>
-		<li><a>Achievements</a></li>
+		<li><a><i class="fa fa-home" aria-hidden="true"></i> { saveService.saveObj.guildName }</a></li>
+		<hr />
+		<li><a><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</a></li>
+		<li><a><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</a></li>
+		<hr />
+		<li><a><i class="fa fa-exclamation" aria-hidden="true"></i> Active Quests</a></li>
+		<li><a><i class="fa fa-question-circle" aria-hidden="true"></i> Job Market</a></li>
+		<li><a><i class="fa fa-users" aria-hidden="true"></i> Hiring Place</a></li>
+		<hr />
+		<li><a><i class="fa fa-trophy" aria-hidden="true"></i> Achievements</a></li>
+		<li><a><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
 	</ul>
+	<script>
+		var mainElement = document.getElementsByTagName("main")[0];
+		mainElement.className += " nav-menu-activated";
+	</script>
+	<style>
+		:scope{
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background: var(--very-dark-brown);
+			width: 200px;
+			border-right: solid 1px var(--dark-brown);
+			font-family: 'IM Fell Double Pica SC', serif;
+			color: #fff;	
+		}
+
+		ul {
+			margin: 9px 0 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			padding: 0;
+			margin: 0;
+		}
+
+		li a {
+			display: inline-block;
+			padding: 10px;
+			font-size: 1.2rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			width: 100%;
+			cursor: pointer;
+		}
+
+		li a i {
+			width: 25px;
+			text-align: center;
+		}
+
+		li a:hover {
+			color: var(--pale-yellow);
+		}
+
+		hr {
+			border-color: var(--dark-brown);
+		}
+	</style>
 </nav-menu>

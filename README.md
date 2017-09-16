@@ -23,6 +23,7 @@ I sincerely recommend you don't
 - riot.js
 - Normalize.css (You can very easily take this out)
 - Google Web Fonts (Again, easy to take out)
+- Font Awesome
 
 That's it
 

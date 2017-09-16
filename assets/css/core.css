@@ -14,11 +14,18 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+
+  --pale-yellow: #ecef66;
+  --very-dark-brown: #080603;
+  --dark-brown: #191209;
 }
 
 body {
     background: url(../img/bg.png) no-repeat;
     background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 [tabindex="-1"]:focus {
@@ -33,8 +40,18 @@ h3 {
     font-size: 35px;
 }
 
-.container {
+main {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
+main.nav-menu-activated {
+    left: 300px;
+    width: calc(100% - 300px);
 }
 
 /* Button HearthStone Base
